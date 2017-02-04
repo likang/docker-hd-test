@@ -15,7 +15,7 @@ RUN apt-get -qq update \
         wget zlib1g-dev --no-install-recommends \
     && apt-get install -y python3 python3-pip python3-setuptools \
         python3-dev --no-install-recommends \
-    && pip3 install --upgrade pip \
+    && pip3 install --upgrade pip setuptools \
     && apt-get install -y mysql-server --no-install-recommends \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
