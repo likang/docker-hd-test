@@ -1,5 +1,11 @@
 FROM ubuntu
 MAINTAINER Li Kang 
+
+RUN locale-gen en_US.UTF-8  
+ENV LANG en_US.UTF-8  
+ENV LANGUAGE en_US:en  
+ENV LC_ALL en_US.UTF-8  
+
 RUN apt-get -qq update \
     && apt-get install -y build-essential ca-certificates curl \
         git libcurl4-openssl-dev libffi-dev libjpeg-dev \
